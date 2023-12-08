@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+
+public class App {
+
+    // Main method for grabbing input from the user and displaying the final prompt to th console
+    // uses for loop to keep asking for numbers untill it reaches 10
+    public static void main(String[] args) throws Exception {
+
+        Scanner input = new Scanner(System.in);
+        double listInput[] = new double[10];
+
+        System.out.println("Please enter 10 double values");
+        for (int i =0; i < listInput.length; i++) {
+            listInput[i] = input.nextDouble();
+        }
+        
+        System.out.println("The average of the tn double values is " + average(listInput));
+    }
+
+    // method for finding the average of numbers entered as doubles
+    // using a for loop to keep adding numbers inputed until 10 numbers are entered
+    public static double average(double[] array){
+
+        double numberSum = 0;
+        for(int i = 0; i < array.length; i++){
+            numberSum += array[i];
+        }
+
+        return  (numberSum / array.length);
+
+    }
+    // method for finding the average of numbers entered as integers
+    // using a for loop to keep adding numbers inputed until 10 numbers are entered
+    public static int average(int[] array){
+        int numberSum = 0;
+        for(int i = 0; i < array.length; i++){
+            numberSum += array[i];
+        }
+
+        return (numberSum / array.length);
+
+    }
+
+    
+}
