@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+       System.out.println("Please input the subtotal:");
+        //Scanner Creation and grabbing the subtotal and gratuity
+       Scanner input = new Scanner(System.in);
+
+       double subtotal = input.nextDouble();
+
+    System.out.println("If you would like to add on a gratuity rate to your   subtotal, please enter one now:");
+
+       double gratuity = input.nextDouble();
+
+       // Creating the math formulas for the final system outprint
+       double percent = gratuity/100;
+
+       double gratuity_dollar = (gratuity/10);
+
+       double total = (subtotal * percent) + subtotal;
+
+       System.out.println("The gratuity is $"+  gratuity_dollar + " so your totatl is $" + total);
+    }
+}
+
+
