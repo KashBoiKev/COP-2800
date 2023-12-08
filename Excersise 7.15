@@ -21,38 +21,38 @@ public class App {
     }
     // method being used to eliminate duplicated numbers
     public static int[] eliminateDuplicates(int[] list) {
-        int uniqueCount = 0;
-        boolean isDuplicateFound = false;
+        int uniqueNumber = 0;
+        boolean isDuplicate = false;
 
         for (int i = 0; i < list.length; i++) {
-            isDuplicateFound = false;
+            isDuplicate = false;
             // for loop used to check for duplicates
-            for (int j = 0; j < uniqueCount; j++) {
+            for (int j = 0; j < uniqueNumber; j++) {
                 if (list[i] == list[j]) {
-                    isDuplicateFound = true;
+                    isDuplicate = true;
                     break;
                 }
             }
             // uniqueCount is added in increments if their isn't a duplicant
-            if (!isDuplicateFound) {
-                uniqueCount++;
+            if (!isDuplicate) {
+                uniqueNumber++;
             }
         }
         // new array is created with the distinct values
-        int[] distinctValues = new int[uniqueCount];
+        int[] distinctValues = new int[uniqueNumber];
         int index = 0;
 
         for (int i = 0; i < list.length; i++) {
-            isDuplicateFound = false;
+            isDuplicate = false;
 
             for (int j = 0; j < index; j++) {
                 if (list[i] == distinctValues[j]) {
-                    isDuplicateFound = true;
+                    isDuplicate = true;
                     break;
                 }
             }
 
-            if (!isDuplicateFound) {
+            if (!isDuplicate) {
                 distinctValues[index++] = list[i];
             }
         }
