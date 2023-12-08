@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        
+        // grabbing the information needed
+        System.out.println("Enter weight in pounds:");
+        Scanner input = new Scanner(System.in);
+        double  weight = input.nextDouble();
+
+        System.out.println("Enter feet:");
+        double feet = input.nextDouble();
+
+        System.out.println("Enter Inches:");
+        double inches = input.nextDouble();
+        
+        // equation for indicating bmi 
+        double inchesTotal = (feet * 12) + inches;
+        double bmi = weight / (inchesTotal * inchesTotal) * 703;
+        System.out.println("Your BMI is " + bmi);
+
+        // boolean expression to indicate the level of bmi
+        if (bmi <= 18.5) 
+            System.out.println("Your Bmi indicates that you're underweight");
+        else if (bmi <= 24.9)
+            System.out.println("Your BMI indicates that you're healthy weight");
+        else 
+            System.out.println("Your Bmi Indicates your overweight");
+    }
+}
+
+
