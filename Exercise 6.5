@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class App {
+
+    // main method used to grab inputted numbers so displaySortedNumbers method is able to grab them
+    public static void main(String[] args) throws Exception {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Enter 3 numbers:");
+        double num1 = input.nextDouble();
+        double num2 = input.nextDouble();
+        double num3 = input.nextDouble();
+        
+        displaySortedNumbers(num1,num2,num3);
+    }
+
+    // Method used to organize the inputted numbers from least to greatest
+    // If statemens wil be used to sort the numbers
+    public static void displaySortedNumbers(double num1, double num2, double num3){
+
+        double lowerSwap;
+
+
+            if (num1 > num2) {
+                lowerSwap = num1;
+                num1 = num2;
+                num2 = lowerSwap;
+            }
+        
+            if (num2 > num3) {
+                lowerSwap = num2;
+                num2 = num3;
+                num3 = lowerSwap;
+            }
+        
+            if (num1 > num2) {
+                lowerSwap = num1;
+                num1 = num2;
+                num2 = lowerSwap;
+            }
+        
+     
+     
+            System.out.println(num1 + " " + num2 + " " + num3);
+
+
+
+    }
+
+    
+}
