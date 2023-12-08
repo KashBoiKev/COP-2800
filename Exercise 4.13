@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please enter a letter to determine if it's a vowel or constant");
+        String letter = input.next();
+        
+        // Grabbing the input and putting it into lowercase for boolean expression
+       char let = Character.toLowerCase(letter.charAt(0));
+
+        // boolean expression for the different outcomes.
+
+        if (!Character.isLetter(let))
+            System.out.println("Invalid input: " + letter);
+
+        else if (let == 'a' || let == 'e' || let == 'i' || let == 'o' || let == 'u')
+            System.out.println("The letter: " + let + " is a vowel");
+        else 
+            System.out.println("The letter: " + let + " is a consonant");
+
+    }
+}
+
+
+
