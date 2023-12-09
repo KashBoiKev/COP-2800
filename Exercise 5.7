@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        
+        int years = 1;
+        Scanner input = new Scanner(System.in);
+        System.out.println("What is the Tuition?");
+        double tuition = input.nextDouble();
+        
+        // while loop for tuition for the 1st 10 years
+        while (years <= 10){
+            tuition = (tuition * 1.05);
+            years++;
+
+            
+            
+        }
+        
+        double ten_years = (double) Math.round(tuition *100) / 100;
+
+        // while loop for the years after 10
+        while (years <= 14){
+
+            tuition = (tuition * 1.05);
+            years++;
+            
+        }
+        double four_years = (double) Math.round(tuition *100) / 100;
+        
+        // final system output for all years
+        System.out.println("In 10 years, the tuition will be: " + "$" + ten_years  +"\n" + 
+                            "4 years after that, The tuition will be: " + "$" + four_years);
+
+    }
+}
